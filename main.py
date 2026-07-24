@@ -612,7 +612,7 @@ def main():
          ["No showtimes found yet for 27 July."],
           [],
           {"name": "The Odyssey"}
-        )
+         )
 
     # Print current status
     print(f"\n  Current status ({len(filtered)} shows):")
