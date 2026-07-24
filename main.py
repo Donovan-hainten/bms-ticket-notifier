@@ -573,14 +573,8 @@ def main():
         all_shows.extend(parse_shows(data))
 
     if not all_shows:
-        print("  ❌ No showtimes found.")
+        print("  ❌ No showtimes found.")    
         
-        send_email(
-              "Railway Email Test",
-              ["No showtimes found yet for 27 July."],
-              [],
-              {"name": "The Odyssey"}
-           )
         sys.exit(0)
 
     print(f"  🎬 {movie_info['name']}  {movie_info['language']}")
