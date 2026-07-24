@@ -574,6 +574,12 @@ def main():
 
     if not all_shows:
         print("  ❌ No showtimes found.")
+          send_email(
+              "Railway Email Test",
+              ["No showtimes found yet for 27 July."],
+              [],
+              {"name": "The Odyssey"}
+           )
         sys.exit(0)
 
     print(f"  🎬 {movie_info['name']}  {movie_info['language']}")
@@ -619,12 +625,7 @@ def main():
         fmt = f"|{s.screen_attr}" if s.screen_attr else ""
         print(f"    {s.venue_name} — {s.time}{fmt} [{s.date_code}] — {cats}")
 
-    send_email(
-    "Railway Email Test",
-    ["No showtimes found yet for 27 July."],
-    [],
-    {"name": "The Odyssey"}
-    )
+  
 
 
 
