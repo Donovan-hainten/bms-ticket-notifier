@@ -607,12 +607,7 @@ def main():
         )
     else:
         print("  ✅ No changes since last check.")
-        send_email(
-        "Railway Email Test",
-         ["No showtimes found yet for 27 July."],
-          [],
-          {"name": "The Odyssey"}
-         )
+       
 
     # Print current status
     print(f"\n  Current status ({len(filtered)} shows):")
@@ -623,6 +618,15 @@ def main():
         )
         fmt = f"|{s.screen_attr}" if s.screen_attr else ""
         print(f"    {s.venue_name} — {s.time}{fmt} [{s.date_code}] — {cats}")
+
+    send_email(
+    "Railway Email Test",
+    ["No showtimes found yet for 27 July."],
+    [],
+    {"name": "The Odyssey"}
+    )
+
+
 
     print("\n  Done.")
 
