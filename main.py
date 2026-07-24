@@ -172,6 +172,7 @@ def fetch_bms(event_code, date_code, region_code, region_slug,
         resp = requests.get(API_URL, headers=headers,
                             params=params, timeout=15)
         if resp.status_code == 200:
+           data = resp.json()
             
            print("=== DEBUG KEYS ===")
            print(data.keys())
