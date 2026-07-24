@@ -574,7 +574,8 @@ def main():
 
     if not all_shows:
         print("  ❌ No showtimes found.")
-          send_email(
+        
+        send_email(
               "Railway Email Test",
               ["No showtimes found yet for 27 July."],
               [],
